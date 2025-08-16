@@ -5,8 +5,8 @@ import styles from "./Card.module.css";
 type CardProps = {
     title: string;
     description: string;
-    image: string;
-    link: string;
+    image?: string;
+    link?: string;
 };
 
 export default function Card({ title, description, image, link }: CardProps ) {
