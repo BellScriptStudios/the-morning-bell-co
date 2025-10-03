@@ -1,11 +1,28 @@
 .main {
   min-height: 100svh;
-  background:radial-gradient(1200px 600px at 50% -200px, rgba(255,255,255,0.06), transparent 60%), var(--bg);
-  color: var(--text);
+  /* lighter radial highlight + warm off-white background */
+  background:
+    radial-gradient(1200px 600px at 50% -200px,
+      rgba(251, 232, 166, 0.25), /* soft warm yellow glow */
+      transparent 60%),
+    #FBF8F3; /* warm off-white base */
+  color: #2E2E2E; /* charcoal text for contrast */
 }
 
-.header{ position:sticky; top:0; border-bottom:1px solid var(--line); background:linear-gradient(180deg, rgba(17,21,28,0.75), rgba(17,21,28,0.55)); backdrop-filter:saturate(140%) blur(6px); }
+.header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #E8E2D8; /* subtle warm line */
+  /* airy translucent white instead of dark glass */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.75)
+  );
+  backdrop-filter: saturate(140%) blur(6px);
+}
 .headerInner{ max-width:1200px; margin:0 auto; padding:0.9rem 1.25rem; display:flex; align-items:center; justify-content:space-between; }
+.logo { width: 200px; height: auto; margin-right: 10px;}
 .brand{ font-weight:700; letter-spacing:0.08em; font-size:0.95rem; color:var(--text); }
 .nav{ display:flex; gap:1.25rem; }
 .navLink{ color:var(--muted); text-decoration:none; position:relative; padding:.25rem .15rem; }
@@ -26,7 +43,7 @@
 /* Cards */
 .cards{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:2.25rem; }
 @media(width<960px){ .cards{ grid-template-columns:1fr; } }
-.card{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:1.25rem; box-shadow:0 0 0 1px rgba(0,0,0,0.05) inset, 0 18px 40px rgba(0,0,0,0.25); }
+.card{ background: white; border:1px solid var(--line); border-radius:14px; padding:1.25rem; box-shadow:0 0 0 1px rgba(0,0,0,0.05) inset, 0 18px 40px rgba(0,0,0,0.25); }
 .cardTitle{ font-weight:700; font-size:1.25rem; margin:0 0 .5rem; }
 .cardBody{ color:var(--muted); margin:0; line-height:1.6; }
 .cardLink{ display:inline-block; margin-top:1rem; color:var(--text); font-weight:600; text-decoration:none; position:relative; padding:.25rem .15rem; }

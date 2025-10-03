@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./styles/Page.module.css"
 
 export default function Home() {
@@ -24,7 +25,13 @@ export default function Home() {
     <main className={styles.main}>
       <header className={styles.header}>
         <div className={styles.headerInner}>
-          <div className={styles.brand}>THE MORNING BELL CO.</div>
+          <Image className={styles.logo} 
+            src="/images/TMB-secondary-logo.svg"
+            alt="The Morning Bell Co. Logo"
+            width={32}
+            height={32}
+            priority
+          />
         </div>
       </header>
 
@@ -35,7 +42,11 @@ export default function Home() {
 
       <section id="about" className={styles.section}>
         <h2 className={styles.sectionTitle}>About Us</h2>
-        <p className={styles.sectionBody}>Founded in 2025, The Morning Bell Co. is dedicated to fostering innovation and supporting ventures that align with our vision of a better tomorrow. We believe in the power of ideas and the impact they can have on communities and industries alike.</p>
+        <div className={styles.cards}>
+          <article className={styles.card}>
+            <p className={styles.sectionBody}>Founded in 2025, The Morning Bell Co. is dedicated to fostering innovation and supporting ventures that align with our vision of a better tomorrow. We believe in the power of ideas and the impact they can have on communities and industries alike.</p>
+          </article>
+        </div>
       </section>
 
       <section id="portfolio" className={styles.section}>
