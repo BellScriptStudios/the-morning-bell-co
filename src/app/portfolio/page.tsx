@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PortfolioSection from "../components/PortfolioSection";
@@ -9,16 +8,6 @@ import styles from "../styles/PortfolioPage.module.css";
 export default function PortfolioPage() {
   return (
     <>
-      <Head>
-        <title>Our Businesses | The Morning Bell Co.</title>
-        <meta
-          name="description"
-          content="Explore the diverse portfolio of ventures and investments by The Morning Bell Co., showcasing our commitment to innovation, quality, and community impact."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Header />
 
       <main className={styles.page}>

@@ -15,6 +15,12 @@ export default function Home() {
       <main className={styles.main}>
         <Header />
 
+        <section className={styles.brandName}>
+          <div className={styles.glowBox}>
+            <h1 className={styles.brandText}>THE MORNING BELL CO.</h1>
+          </div>
+        </section>
+
         <section className={styles.hero} id="hero">
           <div className={styles.container}>
             <HeroSection />
