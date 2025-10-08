@@ -68,6 +68,9 @@ export default function Header() {
         className={`${styles.mobilePanel} ${open ? styles.open : ""}`}
         aria-label="Mobile"
       >
+        <Link href="/" className={styles.mobileLink} onClick={closeMenu}>
+          Home
+        </Link>
         <Link href="/about" className={styles.mobileLink} onClick={closeMenu}>
           About
         </Link>
