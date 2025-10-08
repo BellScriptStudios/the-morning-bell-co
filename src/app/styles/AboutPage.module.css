@@ -1,0 +1,198 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 50% -200px,
+      rgba(251, 232, 166, 0.25),
+      transparent 60%),
+    #FBF8F3;
+  color: #1e293b;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 3.5rem 1.25rem 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 .75rem;
+  line-height: 1.1;
+  color: #0f172a;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 60ch;
+}
+
+.mission,
+.origin,
+.contact {
+  text-align: center;
+  padding: clamp(2rem, 8vw, 4rem) 0;
+}
+
+.sectionTitle {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: .75rem;
+}
+
+.sectionText {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.7;
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.values {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.valueCard {
+    background: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    padding: 1.5rem 1.25rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  border-color: #e6b400;
+  box-shadow: 0 8px 20px rgba(230, 180, 0, 0.15);
+}
+
+.valueTitle {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: .4rem;
+}
+
+.valueText {
+  color: #475569;
+  font-size: .95rem;
+  line-height: 1.6;
+}
+
+.ventures {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.venturesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.ventureCard {
+  background: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  padding: 1.75rem 1.25rem;
+  text-decoration: none;
+  color: #0f172a;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ventureCard:hover {
+  transform: translateY(-4px);
+  border-color: #b68c00;
+  box-shadow: 0 8px 20px rgba(230, 180, 0, 0.15);
+}
+
+.ventureLogo {
+  display: block;
+  margin: 0 auto 1rem;
+  max-height: 150px;
+  width: auto;
+  object-fit: contain;
+}
+
+.ventureMore {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b68c00;
+  margin-top: 0.5rem;
+}
+
+.venturesCta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contactCta {
+    margin-top: 2rem;
+    text-align: center;
+}
+.link {
+    background-color: #FFBF00;
+    color: var(--text);
+    font-weight: 600;
+    padding: .5rem .75rem;
+    text-decoration: none;
+    border-radius: 14px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 191, 0, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 191, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 191, 0, 0);
+    }
+}
+
+.link:hover { 
+    background-color: #e6ac00;
+    color: var(--text);
+    text-decoration: none;
+    animation: none;
+    transform: scale(1.05);
+
+}
+  
+
+@media (max-width: 640px) {
+  .lead,
+  .sectionText { font-size: 0.95rem; }
+
+  .valueCard { padding: 1.25rem; }
+  .ventureCard { padding: 1.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .valueCard,
+  .ventureCard,
+  .link::after { transition: none; }
+}

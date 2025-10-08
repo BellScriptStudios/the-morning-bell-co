@@ -1,0 +1,93 @@
+.footer {
+  background: color-mix(in srgb, #ffffff 92%, transparent);
+  color: #334155;
+  border-top: 1px solid var(--line, rgba(0,0,0,.08));
+  padding: 2rem 1.25rem calc(2rem + env(safe-area-inset-bottom));
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.footerNav { display: flex; gap: 1rem; flex-wrap: wrap; }
+.copy { color: #64748b; font-size: .9rem; }
+
+/* Links + buttons share the same hover animation */
+.link,
+.footerLink,
+.devTag,
+button.link,
+.footerNav button {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: .125rem 0;                /* bigger tap target */
+  -webkit-tap-highlight-color: transparent;
+  transition: color .25s ease;
+}
+
+.copyright { font-size: .95rem;}
+
+.link::after,
+.footerLink::after,
+.devTag::after,
+button.link::after,
+.footerNav button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #b68c00;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.link:hover,
+.footerLink:hover,
+.devTag:hover,
+button.link:hover,
+.footerNav button:hover {
+  color: #b68c00;
+}
+
+.link:hover::after,
+.footerLink:hover::after,
+.devTag:hover::after,
+button.link:hover::after,
+.footerNav button:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Keyboard focus */
+.link:focus-visible,
+.footerLink:focus-visible,
+.devTag:focus-visible,
+button.link:focus-visible,
+.footerNav button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(182,140,0,.35);
+  border-radius: 6px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footerInner { flex-direction: column; align-items: flex-start; }
+  .copyright, .devTag { font-size: .75rem; }
+}

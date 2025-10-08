@@ -1,0 +1,21 @@
+{
+  "name": "The Morning Bell Co.",
+  "short_name": "The Morning Bell Co.",
+  "description": "The Morning Bell Co. is a parent company uniting ventures like BellScript Studios and future brands across tech, design, and property.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

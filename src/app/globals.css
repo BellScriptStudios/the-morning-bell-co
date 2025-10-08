@@ -1,11 +1,11 @@
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --bg: #0c0f14;
-  --panel: #11151c;
-  --text: e7e7ea;
-  --muted: c6c8ce;
-  --line: rgba(255,255,255,0.06);
+  --bg: #f9fafb;
+  --panel: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --line: rgba(0, 0, 0, 0.08);
+  --accent: #0066cc;
 }
 
 @media (prefers-color-scheme: dark) {
