@@ -113,10 +113,7 @@
   100% { background-position: -200% center; }
 }
 
-.about {
-  margin: 3rem;
-}
-
+.about,
 .portfolio {
-  margin-top: 8rem;
+  margin: 2.25rem;
 }

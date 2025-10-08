@@ -12,14 +12,15 @@ export default function AboutSection() {
         around them.
       </p>
 
+
       <p className={styles.mission}>
         Our mission is to nurture and grow businesses that align with our values
         of integrity, innovation, and impact. We believe in the power of ideas
         to transform industries and improve lives, and we are committed to
         supporting ventures that share this vision.
       </p>
-
-      <div className={styles.valuesGrid} role="list">
+      <section className={styles.stack} id="stacl">
+        <div className={styles.valuesGrid} role="list">
         <div className={styles.valueCard} role="listitem">
           <h3 className={styles.valueTitle}>Clarity</h3>
           <p className={styles.valueText}>
@@ -62,7 +63,8 @@ export default function AboutSection() {
             ventures and ourselves.
           </p>
         </div>
-      </div>
+        </div>
+      </section>
 
       <div className={styles.divider} />
 
