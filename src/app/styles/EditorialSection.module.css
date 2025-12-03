@@ -1,0 +1,61 @@
+.editorial {
+    width: 100%;
+    padding: 2.75rem 1.25rem 3.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.editorialInner {
+    width: 100%;
+    max-width: 900px;
+}
+
+.editorialKicker {
+    font-family: var(--font-inter);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.editorialTitle {
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.75rem;
+    color: var(--text);
+}
+
+.editorialBody {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.editorialText {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--muted);
+    text-wrap: pretty;
+}
+
+@media (min-width: 768px) {
+    .editorial {
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .editorialTitle {
+        font-size: 1.5rem;
+    }
+
+    .editorialText {
+        font-size: 1rem;
+        max-width: 60ch;
+    }
+}

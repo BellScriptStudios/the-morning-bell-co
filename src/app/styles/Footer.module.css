@@ -10,21 +10,31 @@
   margin: 0 auto;
   padding: 1rem 1.25rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: .75rem;
+  gap: 0.75rem;
 }
 
 .footerNav { display: flex; gap: 1rem; flex-wrap: wrap; }
-.copy { color: #64748b; font-size: .9rem; }
 
-/* Links + buttons share the same hover animation */
+.copyright{ 
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+.copyright,
+.devTag {
+  font-family: var(--font-inter);
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
 .link,
 .footerLink,
-.devTag,
+.devLink,
 button.link,
 .footerNav button {
+  font-family: var(--font-inter);
   position: relative;
   font-size: 0.95rem;
   font-weight: 600;
@@ -33,16 +43,14 @@ button.link,
   cursor: pointer;
   border: none;
   background: transparent;
-  padding: .125rem 0;                /* bigger tap target */
+  padding: 0.125rem 0;
   -webkit-tap-highlight-color: transparent;
-  transition: color .25s ease;
+  transition: color 0.25s ease;
 }
-
-.copyright { font-size: .95rem;}
 
 .link::after,
 .footerLink::after,
-.devTag::after,
+.devLink::after,
 button.link::after,
 .footerNav button::after {
   content: "";
@@ -51,43 +59,45 @@ button.link::after,
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background: #b68c00;
+  background: var(--accent);
   opacity: 0;
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform .25s ease, opacity .25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .link:hover,
 .footerLink:hover,
-.devTag:hover,
+.devLink:hover,
 button.link:hover,
 .footerNav button:hover {
-  color: #b68c00;
+  color: var(--accent);
 }
 
 .link:hover::after,
 .footerLink:hover::after,
-.devTag:hover::after,
+.devLink:hover::after,
 button.link:hover::after,
 .footerNav button:hover::after {
   opacity: 1;
   transform: scaleX(1);
 }
 
-/* Keyboard focus */
 .link:focus-visible,
 .footerLink:focus-visible,
-.devTag:focus-visible,
+.devLink:focus-visible,
 button.link:focus-visible,
 .footerNav button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(182,140,0,.35);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.35);
   border-radius: 6px;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .footerInner { flex-direction: column; align-items: flex-start; }
-  .copyright, .devTag { font-size: .75rem; }
+@media (min-width: 768px) {
+  .footerInner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
 }

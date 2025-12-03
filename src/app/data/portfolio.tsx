@@ -1,6 +1,8 @@
 export type PortfolioItem = {
     id: string;
     name: string;
+    role: string;
+    status: 'active' | 'inactive' | 'coming soon' | 'in development' | 'paused' | 'acquired' | 'sold' ;
     description: string;
     link?: {
         href: string;
@@ -13,34 +15,69 @@ export type PortfolioItem = {
         width: number;
         height: number;
     };
-    status?: 'active' | 'inactive' | 'coming soon' | 'in development' | 'paused' | 'acquired' | 'sold' ;
-    featured?: boolean;
     active?: boolean;
 }
 
 export const PORTFOLIO: PortfolioItem[] = [
  {
-    id: "bs-001",
-    name: "BellScript Studios — Web & Software Division",
-    description: "A full-stack web and software development studio building modern, scalable solutions for businesses and creators.",
+    id: "bellscript",
+    name: "BellScript Studios",
+    role: "Digital Studio",
+    status: "active",
+    description: "The digital arm of The Morning Bell Co., focused on modern web systems, technical implementation, and brand-aligned platforms for clients.",
     link: {
         href: "https://bellscript.studio",
-        label: "Visit Website \u2192",
+        label: "Visit Website",
         ariaLabel: "Visit BellScript Studios website"
     },
     image: {
         src: "/images/primary-bs.png",
         alt: "BellScript Studios Logo",
-        width: 200,
-        height: 200
+        width: 75,
+        height: 75
     },
-    status: "active",
-    featured: true,
     active: true
+    },
+ {
+    id: "client-solutions",
+    name: "Client Solutions",
+    role: "Collaborative Projects",
+    status: "active",
+    description: "Bespoke websites, platforms, and integrations built in partnership with organizations that need clear, long-term digital infrastructure.",
+    link: {
+        href: "https://bellscript.studio",
+        label: "Visit Website",
+        ariaLabel: "Visit BellScript Studios website"
+    },
+    image: {
+        src: "/images/primary-bs.png",
+        alt: "BellScript Studios Logo",
+        width: 75,
+        height: 75
+    },
+    active: false
+    },
+ {
+    id: "concepts",
+    name: "Concept Development",
+    role: "Research & Innovation",
+    status: "in development",
+    description: "A full-stack web and software development studio building modern, scalable solutions for businesses and creators.",
+    link: {
+        href: "https://bellscript.studio",
+        label: "Visit Website",
+        ariaLabel: "Visit BellScript Studios website"
+    },
+    image: {
+        src: "/images/primary-bs.png",
+        alt: "BellScript Studios Logo",
+        width: 75,
+        height: 75
+    },
+    active: false
     }
 ];
 
-export const FEATURED_VENTURES: PortfolioItem[] = PORTFOLIO.filter(p => p.featured && p.active !== false);
 export const ACTIVE_VENTURES: PortfolioItem[] = PORTFOLIO.filter(p => p.active !== false);
 export const INACTIVE_VENTURES: PortfolioItem[] = PORTFOLIO.filter(p => p.active === false);
 export const ALL_VENTURES: PortfolioItem[] = PORTFOLIO;

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "../styles/Header.module.css";
 
@@ -28,20 +27,13 @@ export default function Header() {
 
         <div className={styles.brand}>
           <Link href="/" className={styles.homeLink} aria-label="The Morning Bell Co. Home">
-            <Image
-              className={styles.logo}
-              src="/images/TMB-secondary-logo.svg"
-              alt="The Morning Bell Co. Logo"
-              width={160}
-              height={40}
-              priority
-            />
+            The Morning Bell Co.
           </Link>
         </div>
 
         <nav className={`${styles.rightNav} ${styles.desktopOnly}`} aria-label="Primary right">
           <Link href="/portfolio" className={`${styles.link} ${isActive("/portfolio") ? styles.active : ""}`}>
-            Our Businesses
+            Our Ventures
           </Link>
         </nav>
 
@@ -75,7 +67,7 @@ export default function Header() {
           About
         </Link>
         <Link href="/portfolio" className={styles.mobileLink} onClick={closeMenu}>
-          Our Businesses
+          Our Ventures
         </Link>
       </nav>
     </header>

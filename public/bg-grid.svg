@@ -1,0 +1,57 @@
+<svg
+  width="1440"
+  height="900"
+  viewBox="0 0 1440 900"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Warm sunrise gradient base -->
+  <defs>
+    <linearGradient id="warmSunrise" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFF4E8"/>      <!-- soft cream -->
+      <stop offset="35%" stop-color="#FFE3C6"/>     <!-- warm apricot -->
+      <stop offset="70%" stop-color="#FBC4B5"/>     <!-- peach/rose -->
+      <stop offset="100%" stop-color="#F3AFC4"/>    <!-- warm rosy tone -->
+    </linearGradient>
+
+    <!-- Soft radial glow for depth (subtle) -->
+    <radialGradient id="warmGlow" cx="60%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.75)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background fill -->
+  <rect width="1440" height="900" fill="url(#warmSunrise)"/>
+  <rect width="1440" height="900" fill="url(#warmGlow)"/>
+
+  <!-- Light geometric grid lines -->
+  <g stroke="#EED6C4" stroke-width="0.6" opacity="0.45">
+    <!-- vertical -->
+    <line x1="240" y1="0" x2="240" y2="900"/>
+    <line x1="480" y1="0" x2="480" y2="900"/>
+    <line x1="720" y1="0" x2="720" y2="900"/>
+    <line x1="960" y1="0" x2="960" y2="900"/>
+    <line x1="1200" y1="0" x2="1200" y2="900"/>
+
+    <!-- horizontal -->
+    <line x1="0" y1="180" x2="1440" y2="180"/>
+    <line x1="0" y1="360" x2="1440" y2="360"/>
+    <line x1="0" y1="540" x2="1440" y2="540"/>
+    <line x1="0" y1="720" x2="1440" y2="720"/>
+  </g>
+
+  <!-- Soft concentric arcs -->
+  <g stroke="#F1C9B8" stroke-width="0.9" opacity="0.55">
+    <circle cx="1050" cy="450" r="240" fill="none"/>
+    <circle cx="1050" cy="450" r="340" fill="none"/>
+    <circle cx="1050" cy="450" r="440" fill="none"/>
+  </g>
+
+  <!-- Sweeping curves for depth -->
+  <g stroke="#EECDBE" stroke-width="0.8" opacity="0.5">
+    <path d="M-200 650 C 300 350, 750 350, 1400 150" fill="none"/>
+    <path d="M-200 850 C 250 550, 800 500, 1500 320" fill="none"/>
+    <path d="M-200 450 C 200 250, 700 200, 1450 80" fill="none"/>
+  </g>
+</svg>

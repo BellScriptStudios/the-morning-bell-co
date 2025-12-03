@@ -1,0 +1,100 @@
+.mission {
+    width: 100%;
+    padding: 2.75rem 1.25rem 3.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.missionInner {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+}
+
+.missionIntro {
+    max-width: 560px;
+}
+
+.missionKicker {
+    font-family: var(--font-inter);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+}
+
+.missionTitle {
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.75rem;
+    color: var(--text);
+}
+
+.missionDesc {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.missionValues {
+  max-width: 560px;
+}
+.valuesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.valueItem {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.2rem;
+}
+
+.valueLabel {
+  font-family: var(--font-inter-tight);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.valueText {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .missionInner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .missionTitle {
+    font-size: 1.55rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mission {
+    padding-top: 3.25rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .missionTitle {
+    font-size: 1.7rem;
+  }
+}

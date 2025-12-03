@@ -1,119 +1,120 @@
 .main {
-  min-height: 100svh;
-  /* lighter radial highlight + warm off-white background */
-  background:
-    radial-gradient(1200px 600px at 50% -200px,
-      rgba(251, 232, 166, 0.25),
-      transparent 60%),
-    #FBF8F3;
   color: #2E2E2E;
 }
 
-.brandName {
+.portfolio {
+  width: 100%;
+  padding: 2.75rem 1.25rem 3.25rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: clamp(1rem, 8vw, 3rem) 0;
 }
 
-.glowBox {
-  position: relative;
-  display: inline-block;
-  padding: clamp(1.1rem, 4vw, 2rem) clamp(1.25rem, 6vw, 3rem);
-  border-radius: 14px;
-  overflow: hidden;
-  transition: transform .25s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.brandText {
-  font-size: clamp(1.4rem, 6.5vw, 2.6rem);
-  font-weight: 800;
-  letter-spacing: .06em;
-  color: #0f172a;
-  text-align: center;
-  line-height: 1.12;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-}
-
-/* top & bottom gold lines */
-.glowBox::before,
-.glowBox::after {
-  content: "";
-  position: absolute;
-  left: 0;
+.portfolioInner {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ffb700, #ffe066, transparent);
-  background-size: 200% auto;
-  opacity: 0;
-  filter: drop-shadow(0 0 6px rgba(255,183,0,.55));
-  transition: opacity .3s ease;
-  will-change: background-position;
+  max-width: 1100px;
 }
 
-.glowBox::before { top: 0; }
-.glowBox::after  { bottom: 0; }
-
-/* Desktop/hover devices: animate on hover/focus */
-.glowBox:hover::before,
-.glowBox:hover::after,
-.glowBox:focus-visible::before,
-.glowBox:focus-visible::after {
-  opacity: 1;
-  animation: goldSweep 3.5s ease-in-out infinite;
+.portfolioKicker {
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
 }
 
-/* Touch devices: run a gentle, always-on shimmer; intensify on tap */
-@media (pointer: coarse) {
-  .glowBox::before,
-  .glowBox::after {
-    opacity: .45;
-    animation: goldSweep 5s ease-in-out infinite;
+.portfolioTitle {
+  font-family: var(--font-inter);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.75rem;
+  color: var(--text);
+}
+
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.portfolioCard {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow:
+    0 8px 20px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.portfolioLink {
+  display: block;
+  padding: 1.3rem 1.25rem 1.35rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfilioHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.portfilioHeader h3 {
+  font-family: var(--font-inter-tight);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.portfolioArrow {
+  font-size: 1rem;
+  opacity: 0.5;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.portfolioDesc {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.portfolioCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow:
+    0 14px 28px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.portfolioCard:hover .portfolioArrow {
+  opacity: 0.85;
+  transform: translate(2px, -2px);
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    padding-top: 3rem;
+    padding-bottom: 3.25rem;
   }
-  .glowBox:active::before,
-  .glowBox:active::after {
-    opacity: .9;
-    animation-duration: 3.2s;
+
+  .portfolioTitle {
+    font-size: 1.4rem;
   }
-}
 
-/* Focus ring for keyboard users */
-.glowBox:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(255,191,0,.35);
-}
-
-/* Motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .glowBox,
-  .glowBox::before,
-  .glowBox::after { transition: none; animation: none; }
-  /* keep a subtle static accent */
-  .glowBox::before,
-  .glowBox::after { opacity: .4; background-position: 50% center; }
-}
-
-/* Small phones: a bit tighter */
-@media (max-width: 380px) {
-  .glowBox { padding: .9rem 1rem; border-radius: 12px; }
-  .brandText { font-size: clamp(1.25rem, 7vw, 2.1rem); letter-spacing: .05em; }
-}
-
-/* Hover lift */
-.glowBox:hover { transform: translateY(-2px); }
-.glowBox:active { transform: translateY(-1px); }
-
-/* Sweep animation */
-@keyframes goldSweep {
-  0%   { background-position: 200% center; }
-  50%  { background-position:   0% center; }
-  100% { background-position: -200% center; }
-}
-
-.about,
-.portfolio {
-  margin: 2.25rem;
+  .portfolioGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
 }

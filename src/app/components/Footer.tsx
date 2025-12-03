@@ -9,10 +9,18 @@ export default function Footer() {
         <div className={styles.footerInner}>
           <div className={styles.footerNav}>
             <button className={styles.link} onClick={() => { window.location.href = "/about"}}>About</button>
-            <button className={styles.link} onClick={() => { window.location.href = "/portfolio"}}>Portfolio</button>
-            < a href="mailto:hello@themorningbell.co" className={styles.link}>Contact</a>
+            <button className={styles.link} onClick={() => { window.location.href = "/ventures"}}>Ventures</button>
+            <button className={styles.link} onClick={() => { window.location.href = "/contact"}}>Contact</button>
           </div>
-          <span className={styles.copyright}>© {year} The Morning Bell Co. — Built by <Link href="https://bellscript.studio" target="_blank" className={styles.devTag}>BellScript Studios</Link></span>
+          <span className={styles.copyright}>© {year} The Morning Bell Co.</span>
+
+           <span className={styles.devTag}>
+              Built by <Link
+                href="https://bellscript.studio"
+                target="_blank" className={styles.devLink}>
+                  BellScript Studios
+                </Link>
+            </span>
         </div>
       </footer>
     )

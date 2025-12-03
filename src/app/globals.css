@@ -1,11 +1,14 @@
-
 :root {
   --bg: #f9fafb;
   --panel: #ffffff;
   --text: #1e293b;
   --muted: #64748b;
   --line: rgba(0, 0, 0, 0.08);
-  --accent: #0066cc;
+  --accent: #2563eb;
+  --accent-soft: #e0ecff;
+  --sunrise-gold: #F4DFA7;
+  --sunrise-peach: #F7BFAF;
+  --sunrise-rose: #E09BAA;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,10 +26,16 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #F7F9FC;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
 }
 
 * {
