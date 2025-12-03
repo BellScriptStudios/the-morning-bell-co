@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 
 export const metadata: Metadata = {
-  title: "The Morning Bell Co. - Investing in the ideas worth waking up for",
+  title: "The Morning Bell Co. - Building the systems that support long-term innovation",
   description:
-    "The Morning Bell Co. is a parent company uniting ventures like BellScript Studios and future brands across tech, design, and property.",
+    "The Morning Bell Co. develops and supports ventures at the intersection of digital technology, applied design, and scalable operational strategy. We build the systems and structures that enable long-term clarity, growth, and innovation.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any", type: "image/x-icon" },
