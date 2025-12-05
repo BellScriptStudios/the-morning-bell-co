@@ -77,7 +77,7 @@ export default function ContactPage() {
                                     >
                                         <option value="venture">New venture or concept</option>
                                         <option value="project">Digital project / platform</option>
-                                        <option value="partnership">Partnership or collaboratio</option>
+                                        <option value="partnership">Partnership or collaboration</option>
                                         <option value="other">Other</option>
                                     </select>
                                 </div>

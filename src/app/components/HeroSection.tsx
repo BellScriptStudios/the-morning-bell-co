@@ -8,12 +8,12 @@ export default function HeroSection() {
                 <div className={styles.heroInner}>
 
                     <Image
-                    className={styles.logo}
-                    src="/images/TMB-submark.svg"
-                    alt="The Morning Bell Co. Logo"
-                    width={160}
-                    height={40}
-                    priority
+                        className={styles.logo}
+                        src="/images/TMB-submark.svg"
+                        alt="The Morning Bell Co. Logo"
+                        width={160}
+                        height={40}
+                        priority
                     />
 
                     <h1 className={styles.title}>
