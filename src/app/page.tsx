@@ -47,19 +47,6 @@ export default function Home() {
               <article className={styles.portfolioCard}>
                 <Link href="/portfolio" className={styles.portfolioLink}>
                   <div className={styles.portfilioHeader}>
-                    <h3 className={styles.portfilioName}>Client Solutions</h3>
-                    <span className={styles.portfolioArrow}>&#8599;</span>
-                  </div>
-                  <p className={styles.portfolioDesc}>
-                    Tailored digital strategies, platforms, and integrations 
-                    developed in collaboration with our partners
-                  </p>
-                </Link>
-              </article>
-
-              <article className={styles.portfolioCard}>
-                <Link href="/portfolio" className={styles.portfolioLink}>
-                  <div className={styles.portfilioHeader}>
                     <h3 className={styles.portfolioName}>Concept Development</h3>
                     <span className={styles.portfolioArrow}>&#8599;</span>
                   </div>
