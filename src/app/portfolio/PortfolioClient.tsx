@@ -27,15 +27,6 @@ const VENTURES: Venture[] = [
     href: "https://www.bellscript.studio",
   },
   {
-    id: "client-solutions",
-    name: "Client Solutions",
-    role: "Collaborative Projects",
-    status: "Active",
-    description:
-      "Bespoke websites, platforms, and integrations built in partnership with organizations that need clear, long-term digital infrastructure.",
-    href: "/contact",
-  },
-  {
     id: "concepts",
     name: "Concepts",
     role: "Innovation",
