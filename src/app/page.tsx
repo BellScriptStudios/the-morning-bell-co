@@ -45,7 +45,7 @@ export default function Home() {
               </article>
 
               <article className={styles.portfolioCard}>
-                <Link href="/portfolio" className={styles.portfolioLink}>
+                <Link href="/concepts" className={styles.portfolioLink}>
                   <div className={styles.portfilioHeader}>
                     <h3 className={styles.portfolioName}>Concept Development</h3>
                     <span className={styles.portfolioArrow}>&#8599;</span>
