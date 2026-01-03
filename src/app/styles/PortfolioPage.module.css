@@ -269,8 +269,8 @@
   box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
 }
 
-.cardLink::before {
-  content: "↗";
+.cardLink::after {
+  content: "→";
   font-size: 0.85em;
   transform: translateY(1px);
   transition: transform 0.18s ease;
