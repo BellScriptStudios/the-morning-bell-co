@@ -17,36 +17,54 @@
   align-items: center;
 }
 
-.leftNav, .rightNav {
+.brand {
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
-.leftNav { justify-content: flex-end; }
-.rightNav { justify-content: flex-start; }
+.brand:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
 
-.brand {
-  font-family: var(--font-inter);
-  display: flex;
-  justify-self: center;
+.brand:active {
+  transform: translateY(0);
+}
+
+.homeLink {
+  display: inline-flex;
   align-items: center;
-  line-height: 0;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brandText {
+  font-family: var(--font-inter);
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
   font-weight: 600;
   color: var(--text);
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+}
+
 .link {
   font-family: var(--font-inter);
-  margin: 0 2rem;
   position: relative;
+
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #0f172a;
+  color: #334155;
+
   text-decoration: none;
-  border: none;
-  background: transparent;
-  padding: 0.25rem 0;
-  transition: color 0.25s ease;
+  padding: 0.2rem 0;
+
+  transition: color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -54,31 +72,41 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: -4px;
+
   width: 100%;
-  height: 2px;
-  background: var(--accent);
+  height: 1.5px;
   border-radius: 999px;
+
+  background: var(--accent);
   opacity: 0;
+
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
 }
 
-.link:hover { color: var(--accent); }
-.link:hover::after { opacity: 1; transform: scaleX(1); }
+.link:hover {
+  color: var(--accent);
+}
 
-.active { color: var(--accent); }
+.link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.conceptsLink {
+  font-weight: 600;
+}
+
+.active {
+  color: #0f172a;
+}
 
 .active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--accent);
   opacity: 1;
   transform: scaleX(1);
 }
@@ -87,6 +115,69 @@
   outline: none;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.4);
   border-radius: 4px;
+}
+
+.contactBtn {
+  display: none;
+  justify-content: flex-end;
+}
+
+@media( min-width: 768px ) {
+  .contactBtn {
+    display: flex;
+  }
+}
+
+.headerBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+
+  font-family: var(--font-inter);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+
+  color: #0f172a;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px rgba(15, 23, 42, 0.08);
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.headerBtn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 23, 42, 0.22);
+  transform: translateY(-1px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.headerBtn:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    inset 0 2px 4px rgba(15, 23, 42, 0.15),
+    0 3px 6px rgba(15, 23, 42, 0.1);
 }
 
 .menuToggle {
@@ -163,6 +254,46 @@
 }
 
 .mobileLink:hover { background: var(--accent-soft); color: var(--accent); }
+
+.mobileContactLink {
+  text-align: center;
+  color: #0f172a;
+  text-decoration: none;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 4px 10px rgba(15, 23, 42, 0.08);
+
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.mobileContactLink:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 23, 42, 0.22);
+  transform: translateY(-1px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+
+.mobileContactLink:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    inset 0 2px 4px rgba(15, 23, 42, 0.15),
+    0 3px 6px rgba(15, 23, 42, 0.1);
+}
 
 .desktopOnly { display: flex; }
 

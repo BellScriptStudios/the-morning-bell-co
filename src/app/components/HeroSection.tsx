@@ -1,20 +1,10 @@
 import styles from '../styles/HeroSection.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function HeroSection() {
     return (
             <section className={styles.hero}>
                 <div className={styles.heroInner}>
-
-                    <Image
-                        className={styles.logo}
-                        src="/images/TMB-submark.svg"
-                        alt="The Morning Bell Co. Logo"
-                        width={160}
-                        height={40}
-                        priority
-                    />
 
                     <h1 className={styles.title}>
                         Building the systems that support long-term innovation.

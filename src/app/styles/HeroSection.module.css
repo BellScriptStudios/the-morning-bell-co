@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   color: var(--text);
-  padding: 3.5rem 1.25rem 2.5rem;
+  padding: 5rem 1.25rem 2.5rem;
   display: flex;
   justify-content: center;
 }
@@ -159,9 +159,7 @@
 }
 
 @media (min-width: 768px) {
-  .hero {
-    padding: 4.5rem 2rem 3rem 
-  }
+
 
   .logo {
     width: 100px;

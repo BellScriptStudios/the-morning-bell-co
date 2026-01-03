@@ -146,7 +146,7 @@ export default function AboutPage() {
 
                     <div className={styles.contactCta}>
                         <Link href="/contact" className={styles.link}>
-                            Contact The Morning Bell Co
+                            Contact The Morning Bell Co.
                         </Link>
                     </div>
                 </section>
