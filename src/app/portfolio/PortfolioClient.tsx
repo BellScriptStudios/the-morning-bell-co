@@ -33,6 +33,7 @@ const VENTURES: Venture[] = [
     status: "In Development",
     description:
       "Exploratory work around future ventures, community-facing ideas, and systems designed to support emerging opportunities.",
+    href:"/concepts",
   },
 ];
 
